@@ -1,0 +1,48 @@
+/* Madhat Layout */
+.madhat {
+  .madhat-content {
+    border-top: solid 2px @accent;
+  }
+  &:nth-child(even) {
+    padding-right: 15px;
+    @media screen and (max-width: 767px) {
+      padding: 0;
+    }
+  }
+  &:nth-child(odd) {
+    padding-left: 15px;
+    @media screen and (max-width: 767px) {
+      padding: 0;
+    }
+  }
+  padding: 0;
+  .featured-thumb {
+    padding: 0;
+    img { width: 100%; }
+  }
+  .out-thumb {
+    h1 {
+      margin: 0;
+      line-height: 18px;
+      margin-top: 10px;
+      a {
+        font-size: 20px;
+        color: darken(@content, 20%);
+      }
+    }
+    .postedon {
+      font-size: 12px;
+      color: @content;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      a, .fa {
+        color: lighten(@content, 5%);
+      }
+      .fa {
+        margin-right: 5px;
+      }
+      .byline {
+      }
+    }
+  }
+}

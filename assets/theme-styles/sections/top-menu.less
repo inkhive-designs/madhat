@@ -1,0 +1,101 @@
+/* TOP MENU */
+#top-menu {
+  float: none;
+  text-align: center;
+  margin-top: 0px;
+  @media screen and (max-width: 767px) {
+    float: none;
+    text-align: center;
+    padding: 15px;
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 0px;
+    li {
+      position: relative;
+    }
+    ul {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      left: -2px;
+      width: 200px;
+      transform: translateY(10px);
+      .transition(0.4s all ease);
+      background: @sbg;
+      border-top: solid 1px lighten(@content, 45%);
+      z-index: 1000;
+      li {
+        border-right: none;
+        width: 100%;
+        padding: 0;
+        text-align: left;
+        &:nth-child(even) { background: #eee;}
+        &:nth-child(odd) { background: #f7f7f7;}
+        &:hover {
+          background: #ddd;
+        }
+        a {
+          text-transform: none;
+          padding: 8px;
+          font-size: 13px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      /* level 3 onwards */
+      ul {
+        transform: translateX(10px);
+        left: 100%;
+        top: -1px;
+      }
+    }
+    li {
+      display: inline-block;
+      padding: 13px 13px;
+      &:hover {
+        background: #e7e7e7;
+      }
+      a {
+
+        display: inline-block;
+        color: @accent;
+        font-size: 16px;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+      /* DROPDOWN TRIGGER */
+      &:hover {
+        & > ul {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0) translateX(0);
+          .transition(0.8s all ease);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    background: black;
+    margin: 0 -15px;
+  }
+  .mobileMenu {
+    padding:3px;
+    margin: 0;
+    border-radius:4px;
+    background: #ddd;
+    padding: 5px;
+    color: #888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+  }
+
+}

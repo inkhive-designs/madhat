@@ -1,0 +1,28 @@
+/* --------------- pagination ------------ */
+.pagination {
+  margin: 20px 0;
+  padding-top: 25px;
+  text-align: center;
+  width: 100%;
+  clear: both;
+  .page-numbers {
+    padding: 4px 12px;
+    text-decoration: none;
+    margin-right: 5px;
+    background-color: darken(@background, 5%);
+    border: 1px solid darken(@background, 8%);
+    display: inline-block;
+    color: darken(@content, 5%);
+    .transition(0.4s all ease);
+    &:hover {
+      background: @background;
+    }
+  }
+  .current {
+    background: darken(@background, 1%);
+    font-weight: bold;
+  }
+  .current:hover, span:hover {
+    background: darken(@background, 1%);
+  }
+}

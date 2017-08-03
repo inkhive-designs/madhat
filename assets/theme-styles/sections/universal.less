@@ -1,0 +1,62 @@
+.body-font {
+  font-family: "Playfair Display", sans-serif;
+}
+.title-font {
+  font-family: "Playfair Display", sans-serif;
+}
+
+body {
+  .body-font;
+  background: @background;
+  word-wrap: break-word;
+}
+.mega-container {
+  background: white;
+  max-width: 1170px;
+  margin: auto;
+  margin-top: 20px;
+  overflow: visible;
+}
+a {
+  color: @accent;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: @accent;
+  }
+}
+.container {
+  margin: auto;
+}
+/* section titles */
+.section-title {
+  font-weight: bold;
+  color: @accent;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  text-indent: 20px;
+  text-align: center;
+  position: relative;
+  @media screen and (max-width: 991px) {
+    margin-top: 20px;
+  }
+  span {
+    background: @background;
+    position: relative;
+    padding: 15px;
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: transparent;
+    border-top: solid 1px @accent;
+    position: absolute;
+    top: 50%;
+    z-index: 0;
+  }
+}
