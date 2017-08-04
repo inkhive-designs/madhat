@@ -136,10 +136,11 @@ function madhat_fade($color, $val) {
 function madhat_get_blog_layout(){
 	$ldir = 'framework/layouts/content';
 	if (get_theme_mod('madhat_blog_layout') ) :
+
 		get_template_part( $ldir , get_theme_mod('madhat_blog_layout') );
 	else :
 		get_template_part( $ldir ,'grid');	
-	endif;	
+	endif;
 }
 add_action('madhat_blog_layout', 'madhat_get_blog_layout');
 

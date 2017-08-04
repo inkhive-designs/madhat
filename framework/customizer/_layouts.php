@@ -24,7 +24,7 @@ $wp_customize->add_setting(
 );
 
 function madhat_sanitize_blog_layout( $input ) {
-    if ( in_array($input, array('grid','grid_2_column','grid_3_column','madhat') ) )
+    if ( in_array($input, array('grid','grid_2_column','grid_3_column','madhat','grid_alternative') ) )
         return $input;
     else
         return '';
@@ -41,6 +41,7 @@ $wp_customize->add_control(
             'madhat' => __('MadHat Default Layout','madhat'),
             'grid_2_column' => __('Grid - 2 Column','madhat'),
             'grid_3_column' => __('Grid - 3 Column','madhat'),
+            'grid_alternative' => __('Grid - Alternative','madhat'),
         )
     )
 );
