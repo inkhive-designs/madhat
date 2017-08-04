@@ -5,6 +5,29 @@ $wp_customize->add_section('madhat_social_section', array(
     'title' => __('Social Icons','madhat'),
     'priority' => 44 ,
 ));
+//social icons style
+    $social_style = array(
+        'hvr-bounce-to-bottom'  => __('Default', 'madhat'),
+        'hvr-wobble-bottom'   => __('Style 1', 'madhat'),
+        'hvr-ripple-out'   => __('Style 2', 'madhat'),
+        'hvr-rectangle-out'   => __('Style 3', 'madhat'),
+        'hvr-bubble-float-bottom'   => __('Style 4', 'madhat'),
+
+    );
+    $wp_customize->add_setting(
+        'madhat_social_icon_style_set', array(
+        //'sanitize_callback' => 'madhat_sanitize_social',
+        'default' => 'hvr-bounce-to-bottom'
+    ));
+
+    $wp_customize->add_control( 'madhat_social_icon_style_set', array(
+        'settings' => 'madhat_social_icon_style_set',
+        'label' => __('Social Icon Style ','madhat'),
+        'description' => __('You can choose your icon style'),
+        'section' => 'madhat_social_section',
+        'type' => 'select',
+        'choices' => $social_style,
+    ));
 
 $social_networks = array( //Redefinied in Sanitization Function.
     'none' => __('-','madhat'),

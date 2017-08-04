@@ -1,6 +1,8 @@
 #social-icons {
   text-align: center;
-  .social-icon {
+
+  //Style default effect
+  .social-style {
     display: inline-block;
     border: solid 1px @accent;
     color: @onaccent;
@@ -13,9 +15,40 @@
     &:before {
       border-radius: 0%;
       background: @onaccent;
+      color: @accent;
     }
     &:hover {
+      color: @onaccent;
+    }
+  }
+  .hvr-bounce-to-bottom{
+    &:hover{
+      color: @accent;
+    }
+  }
+  .hvr-ripple-out{
+    margin: 10px 0px;
+    &:before{
+      background: none;
+    }
+  }
+  .hvr-bubble-float-bottom,.hvr-buzz-out, .hvr-wobble-bottom{
+    margin: 10px 0px;
+    &:before{
+      background: none;
+    }
+  }
+  .hvr-bounce-in{
+    margin: 10px 0px;
+    &:hover{
+      background: @content;
+    }
+  }
+  .hvr-rectangle-out{
+    margin: 10px 0px;
+    &:hover{
       color: @accent;
     }
   }
 }
+

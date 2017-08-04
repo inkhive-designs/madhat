@@ -17,13 +17,11 @@ function madhat_customize_register( $wp_customize )
     add_action( 'customize_register', 'madhat_customize_register' );
 
 //Load All Individual Settings Based on Sections/Panels.
-//require_once get_template_directory().'/framework/customizer/_customizer_controls.php';
 require_once get_template_directory().'/framework/customizer/_googlefonts.php';
 require_once get_template_directory().'/framework/customizer/_featured-posts.php';
 require_once get_template_directory().'/framework/customizer/_layouts.php';
 require_once get_template_directory().'/framework/customizer/_sanitization.php';
 require_once get_template_directory().'/framework/customizer/header.php';
-//require_once get_template_directory().'/framework/customizer/mail_phone.php';
 require_once get_template_directory().'/framework/customizer/navigation.php';
 require_once get_template_directory().'/framework/customizer/skins.php';
 require_once get_template_directory().'/framework/customizer/social-icons.php';
