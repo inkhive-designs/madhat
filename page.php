@@ -1,5 +1,6 @@
 <?php
 /**
+ *
  * The template for displaying all pages.
  *
  * This is the template that displays all pages by default.
@@ -11,6 +12,9 @@
  */
 
 get_header(); ?>
+    <?php if(is_page_template( 'modules/templates/page-full-width' )):
+    get_template_part( 'modules/templates/page-full-width' ); else:?>
+
 
 	<div id="primary-mono" class="content-area <?php echo esc_attr( apply_filters( 'madhat_primary-width', '' ) ); ?> page">
 		<main id="main" class="site-main" role="main">
@@ -31,5 +35,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php endif;get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -18,20 +18,12 @@
     <?php get_template_part('modules/header/masthead'); ?>
     <?php get_template_part('modules/navigation/top','menu'); ?>
 
+<div class="mega-container">
+    <?php if( class_exists('rt_slider') ) {
+        rt_slider::render('slider', 'nivo' );
+    } ?>
 
-
+<?php get_template_part('framework/featured-components/featured', 'skew'); ?>
+<?php get_template_part('framework/featured-components/featured', 'area2'); ?>
 		
-	<div class="mega-container">
-		
-		
-		<?php if( class_exists('rt_slider') ) {
-			 rt_slider::render('slider', 'nivo' ); 
-		} ?>
-		
-			
-		<?php get_template_part('framework/featured-components/featured', 'skew'); ?>
-		<?php get_template_part('framework/featured-components/featured', 'area2'); ?>
-		
-		
-	
-		<div id="content" class="site-content container">
+<div id="content" class="site-content container">

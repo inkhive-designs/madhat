@@ -73,6 +73,21 @@ function madhat_custom_css_mods() {
 		echo "#masthead .custom-logo { transform: scale(".$val."); -webkit-transform: scale(".$val."); -moz-transform: scale(".$val."); -ms-transform: scale(".$val."); }";
 		endif;
 
+    if(get_theme_mod('madhat_content_fontsize_set')):
+        $size_val=get_theme_mod('madhat_content_fontsize_set');
+        if($size_val=='small'):
+        echo "#primary-mono .entry-content{ font-size:12px;}";
+        elseif ($size_val=='medium'):
+            echo "#primary-mono .entry-content{ font-size:16px;}";
+        elseif ($size_val=='large'):
+            echo "#primary-mono .entry-content{ font-size:18px;}";
+        elseif ($size_val=='extra-large'):
+            echo "#primary-mono .entry-content{ font-size:20px;}";
+        else:
+            echo "#primary-mono .entry-content{ font-size:14px;}";
+        endif;
+        endif;
+
 	echo "</style>";
 }
 
