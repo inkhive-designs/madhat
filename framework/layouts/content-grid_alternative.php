@@ -19,7 +19,7 @@
             <h1 class="entry-title title-font"><a class="hvr-underline-reveal" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
             <div class="postedon"><?php madhat_posted_on(); ?></div>
             <span class="entry-excerpt"><?php the_excerpt(); ?></span>
-            <span class="readmore"><a class="hvr-underline-from-center hvr-wobble-bottom" href="<?php the_permalink() ?>"><?php _e('Read More','madhat'); ?></a></span>
+            <span class="readmore"><a class="hvr-underline-from-center" href="<?php the_permalink() ?>"><?php _e('Read More','madhat'); ?></a></span>
         </header><!-- .entry-header -->
     </div><!--.out-thumb-->
 

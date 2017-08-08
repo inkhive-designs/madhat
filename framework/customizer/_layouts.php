@@ -154,7 +154,7 @@ $wp_customize->add_control(
         'madhat_content_fontsize_set', array(
             'settings' => 'madhat_content_fontsize_set',
             'label'    => __( 'Font Size','madhat' ),
-            'description' => __('Choose your font size'),
+            'description' => __('Choose your font size. This is only for Posts and Pages. It wont affect your blog page.','madhat'),
             'section'  => 'madhat_content_fontsize_sec',
             'type'     => 'select',
             'choices' => array(

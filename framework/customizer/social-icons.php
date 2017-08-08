@@ -16,14 +16,21 @@ $wp_customize->add_section('madhat_social_section', array(
     );
     $wp_customize->add_setting(
         'madhat_social_icon_style_set', array(
-        //'sanitize_callback' => 'madhat_sanitize_social',
+        'sanitize_callback' => 'madhat_sanitize_social_style',
         'default' => 'hvr-bounce-to-bottom'
     ));
+    
+    function madhat_sanitize_social_style( $input ) {
+        if ( in_array($input, array('hvr-bounce-to-bottom','hvr-wobble-bottom','hvr-ripple-out','hvr-rectangle-out','hvr-bubble-float-bottom') ) )
+            return $input;
+        else
+            return '';
+    }
 
     $wp_customize->add_control( 'madhat_social_icon_style_set', array(
         'settings' => 'madhat_social_icon_style_set',
         'label' => __('Social Icon Style ','madhat'),
-        'description' => __('You can choose your icon style'),
+        'description' => __('You can choose your icon style','madhat'),
         'section' => 'madhat_social_section',
         'type' => 'select',
         'choices' => $social_style,

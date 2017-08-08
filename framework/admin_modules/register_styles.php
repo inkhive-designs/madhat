@@ -21,7 +21,7 @@ function madhat_scripts() {
 
     wp_enqueue_style( 'madhat-hover-style', get_template_directory_uri() . '/assets/css/hover.min.css' );
 
-    wp_enqueue_style( 'madhat-main-theme-style', get_template_directory_uri() . '/assets/theme-styles/skins/default.css' );
+    wp_enqueue_style( 'madhat-main-theme-style', get_template_directory_uri() . '/assets/theme-styles/css/default.css' );
 
     wp_enqueue_script( 'madhat-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

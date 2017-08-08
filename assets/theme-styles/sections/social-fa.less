@@ -24,18 +24,34 @@
   .hvr-bounce-to-bottom{
     &:hover{
       color: @accent;
-    }
+    }  
   }
   .hvr-ripple-out{
     margin: 10px 0px;
+    background: lighten(@accent, 20%);
+    border-radius: 5px;
+    color: @onaccent;
+    &:before {
+	    border-radius: 5px;
+	    border-color: lighten(@accent, 20%);
+    }
+    
     &:before{
       background: none;
     }
   }
-  .hvr-bubble-float-bottom,.hvr-buzz-out, .hvr-wobble-bottom{
+  .hvr-bubble-float-bottom,{
     margin: 10px 0px;
     &:before{
       background: none;
+      opacity: 0;
+      .transition(0.4s all ease);
+      border-color: darken(@onaccent, 10%) transparent transparent;
+    }
+    &:hover {
+	    &:before {
+		    opacity: 1;
+	    }
     }
   }
   .hvr-bounce-in{
@@ -46,6 +62,11 @@
   }
   .hvr-rectangle-out{
     margin: 10px 0px;
+    background: lighten(@accent, 20%);
+    border-radius: 5px;
+    &:before {
+	    border-radius: 5px;
+    }
     &:hover{
       color: @accent;
     }

@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+Version 1.0.4
+
+	i) Added More Social Icon Effect
+	ii) Added Ability to Change Font Size
+	iii) Full Width Page Template Added
+	iv) More new feature addtions.
+
 Version 1.0.0.3
 
 	i) Removed Duplicate Fonts
