@@ -88,6 +88,23 @@ function madhat_custom_css_mods() {
         endif;
         endif;
 
+
+
+
+        //
+
+    if(is_page() && has_post_thumbnail()):
+        global $post;
+        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+
+       echo "#masthead { 
+                background-image: url('".$image[0]."')
+             !important}";
+    endif;
+
+
+
+
 	echo "</style>";
 }
 

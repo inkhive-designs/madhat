@@ -19,12 +19,10 @@ get_header(); ?>
 
             <?php while ( have_posts() ) : the_post();
                 if (has_post_thumbnail( $post->ID )) :
-                $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail'); ?>
-                <style>
-                    #masthead {
-                        background-image: url('<?php echo $image[0]; ?>');
-                    }
-                </style>
+                ?>
+
+
+
                 <?php endif; ?>
 
                 <?php get_template_part( 'modules/content/content', 'page' ); ?>

@@ -1,4 +1,4 @@
-<?php
+    <?php
 /* Sanitization Functions Common to Multiple Settings go Here, Specific Sanitization Functions are defined along with add_setting() */
 function madhat_sanitize_checkbox( $input ) {
     if ( $input == 1 ) {
