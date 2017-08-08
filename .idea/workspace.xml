@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2562dfb3-8bbd-45b2-81ba-230fec01996e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/customizer/_layouts.php" afterPath="$PROJECT_DIR$/framework/customizer/_layouts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/customizer/_sanitization.php" afterPath="$PROJECT_DIR$/framework/customizer/_sanitization.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/css-mods.php" afterPath="$PROJECT_DIR$/inc/css-mods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/page-fullwidth.php" afterPath="$PROJECT_DIR$/templates/page-fullwidth.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,48 +23,18 @@
       <file leaf-file-name="social-icons.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/framework/customizer/social-icons.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
-              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="287">
+              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="social-fa.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/social/social-fa.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page-fullwidth.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="page-fullwidth.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/page-fullwidth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="masthead.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/header/masthead.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="top-bar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/header/top-bar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -81,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="css-mods.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="css-mods.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/css-mods.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
@@ -103,7 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bounce-out</find>
       <find>float-sha</find>
       <find>ripp</find>
       <find>outline-in</find>
@@ -133,12 +101,13 @@
       <find>curl-top</find>
       <find>header</find>
       <find>slider</find>
+      <find>madhat-plus</find>
     </findStrings>
     <replaceStrings>
-      <replace>madhat</replace>
       <replace>none</replace>
       <replace>style4</replace>
       <replace>style5</replace>
+      <replace>madhat</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -147,8 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/theme-styles/sections/header.less" />
-        <option value="$PROJECT_DIR$/assets/theme-styles/sections/jumbosearch.less" />
         <option value="$PROJECT_DIR$/assets/theme-styles/sections/navigation.less" />
         <option value="$PROJECT_DIR$/assets/theme-styles/sections/top-menu.less" />
         <option value="$PROJECT_DIR$/assets/theme-styles/featured-components/slider-swiper.less" />
@@ -196,8 +163,10 @@
         <option value="$PROJECT_DIR$/framework/customizer/_layouts.php" />
         <option value="$PROJECT_DIR$/framework/customizer/_sanitization.php" />
         <option value="$PROJECT_DIR$/modules/social/social-fa.php" />
-        <option value="$PROJECT_DIR$/templates/page-fullwidth.php" />
         <option value="$PROJECT_DIR$/inc/css-mods.php" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/framework/customizer/misc-scripts.php" />
+        <option value="$PROJECT_DIR$/templates/page-fullwidth.php" />
       </list>
     </option>
   </component>
@@ -253,20 +222,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="madhat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="madhat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,12 +315,12 @@
       <workItem from="1501743605270" duration="24690000" />
       <workItem from="1501804395731" duration="9748000" />
       <workItem from="1501819287052" duration="29174000" />
-      <workItem from="1502169206567" duration="15517000" />
+      <workItem from="1502169206567" duration="16678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79129000" />
+    <option name="totallyTimeSpent" value="80290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1371" height="735" extended-state="0" />
@@ -420,14 +375,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/layouts/content-grid_2_column.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -683,16 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/customizer/misc-scripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="69" />
-          <folding>
-            <marker date="1501750282500" expanded="true" signature="726:1504" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/customizer/skins.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
@@ -932,22 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/customizer/social-icons.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/theme-styles/sections/social-fa.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="66" column="14" lean-forward="true" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/header/masthead.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -964,6 +885,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/customizer/misc-scripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="41" column="70" lean-forward="false" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="70" />
+          <folding>
+            <marker date="1502192451461" expanded="true" signature="726:1504" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/theme-styles/sections/social-fa.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="66" column="14" lean-forward="true" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/social/social-fa.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -972,10 +919,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/page-fullwidth.php">
+    <entry file="file://$PROJECT_DIR$/framework/customizer/social-icons.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        <state relative-caret-position="287">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -984,6 +931,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="101" column="23" lean-forward="false" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/page-fullwidth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding />
         </state>
       </provider>

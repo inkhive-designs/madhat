@@ -1,5 +1,8 @@
 ChangeLog
 =========
+Version 1.0.5
+	i) Featured image on individual page Bug fix.
+	
 
 Version 1.0.4
 
