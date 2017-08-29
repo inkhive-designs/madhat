@@ -129,5 +129,6 @@ $wp_customize->add_control(
     );
     //site description Font size end
 
+
 }
 add_action( 'customize_register', 'madhat_customize_register_fonts' );

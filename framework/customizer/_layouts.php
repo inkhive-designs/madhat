@@ -127,45 +127,45 @@ $wp_customize->add_control(
         ),
     )
 );
-    //content Font size
-    $wp_customize->add_section(
-        'madhat_content_fontsize_sec',
-        array(
-            'title'     => __('Content Font Size','madhat'),
-            'priority'  => 0,
-            'panel'     => 'madhat_design_panel'
-        )
-    );
-    $wp_customize->add_setting(
-        'madhat_content_fontsize_set',
-        array(
-            'default' => 'default',
-            'sanitize_callback' => 'madhat_sanitize_content_size'
-            )
-    );
-//    function madhat_sanitize_content_size( $input ) {
-//        if ( in_array($input, array('default','small','medium','large','extra-large') ) )
-//            return $input;
-//        else
-//            return '';
-//    }
-
-    $wp_customize->add_control(
-        'madhat_content_fontsize_set', array(
-            'settings' => 'madhat_content_fontsize_set',
-            'label'    => __( 'Font Size','madhat' ),
-            'description' => __('Choose your font size. This is only for Posts and Pages. It wont affect your blog page.','madhat'),
-            'section'  => 'madhat_content_fontsize_sec',
-            'type'     => 'select',
-            'choices' => array(
-                'default'   => 'Default',
-                'small' => 'Small',
-                'medium'   => 'Medium',
-                'large'  => 'Large',
-                'extra-large' => 'Extra Large',
-            ),
-        )
-    );
+//    //content Font size
+//    $wp_customize->add_section(
+//        'madhat_content_fontsize_sec',
+//        array(
+//            'title'     => __('Content Font Size','madhat'),
+//            'priority'  => 0,
+//            'panel'     => 'madhat_design_panel'
+//        )
+//    );
+//    $wp_customize->add_setting(
+//        'madhat_content_fontsize_set',
+//        array(
+//            'default' => 'default',
+//            'sanitize_callback' => 'madhat_sanitize_content_size'
+//            )
+//    );
+////    function madhat_sanitize_content_size( $input ) {
+////        if ( in_array($input, array('default','small','medium','large','extra-large') ) )
+////            return $input;
+////        else
+////            return '';
+////    }
+//
+//    $wp_customize->add_control(
+//        'madhat_content_fontsize_set', array(
+//            'settings' => 'madhat_content_fontsize_set',
+//            'label'    => __( 'Font Size','madhat' ),
+//            'description' => __('Choose your font size. This is only for Posts and Pages. It wont affect your blog page.','madhat'),
+//            'section'  => 'madhat_content_fontsize_sec',
+//            'type'     => 'select',
+//            'choices' => array(
+//                'default'   => 'Default',
+//                'small' => 'Small',
+//                'medium'   => 'Medium',
+//                'large'  => 'Large',
+//                'extra-large' => 'Extra Large',
+//            ),
+//        )
+//    );
 /* Active Callback Function */
 function madhat_show_sidebar_options($control) {
 
