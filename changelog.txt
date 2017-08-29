@@ -1,8 +1,12 @@
 ChangeLog
 =========
+
+Version 1.0.7
+
+	i) Fixed PHP error due to whitespace
+	
 Version 1.0.5
 	i) Featured image on individual page Bug fix.
-	
 
 Version 1.0.4
 
