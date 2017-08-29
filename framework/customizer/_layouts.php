@@ -143,12 +143,12 @@ $wp_customize->add_control(
             'sanitize_callback' => 'madhat_sanitize_content_size'
             )
     );
-    function madhat_sanitize_content_size( $input ) {
-        if ( in_array($input, array('default','small','medium','large','extra-large') ) )
-            return $input;
-        else
-            return '';
-    }
+//    function madhat_sanitize_content_size( $input ) {
+//        if ( in_array($input, array('default','small','medium','large','extra-large') ) )
+//            return $input;
+//        else
+//            return '';
+//    }
 
     $wp_customize->add_control(
         'madhat_content_fontsize_set', array(
