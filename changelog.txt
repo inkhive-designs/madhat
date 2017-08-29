@@ -1,6 +1,10 @@
 ChangeLog
 =========
 
+Version 1.0.8
+
+	i) Added More Typography Options
+
 Version 1.0.7
 
 	i) Fixed PHP error due to whitespace
@@ -70,5 +74,3 @@ Version 0.91
 Version 0.9*
 
 	i) Initial Release.
-	
-	
