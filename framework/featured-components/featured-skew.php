@@ -2,9 +2,11 @@
 <div class="container">
 <?php if ( get_theme_mod('madhat_box_enable') && is_front_page() ) : ?>
 	<div class="popular-articles col-md-12">
-		<div class="section-title">
-			<span><?php echo get_theme_mod('madhat_box_title',__('Popular Articles','madhat')); ?></span>
-		</div>	
+        <?php if(get_theme_mod('madhat_box_title')):?>
+            <div class="section-title">
+                <span><?php echo get_theme_mod('madhat_box_title',__('Popular Articles','madhat')); ?></span>
+            </div>
+        <?php endif;?>
 		
 		<?php /* Start the Loop */ $count=0; ?>
 				<?php

@@ -84,7 +84,7 @@ function madhat_customize_register_fp( $wp_customize ) {
     $wp_customize->add_control(
     'madhat_fa2_enable', array(
     'settings' => 'madhat_fa2_enable',
-    'label'    => __( 'Enable Featured Area 1.', 'madhat' ),
+    'label'    => __( 'Enable Featured Area 2.', 'madhat' ),
     'section'  => 'madhat_fc_fa2',
     'type'     => 'checkbox',
     )
@@ -99,7 +99,7 @@ function madhat_customize_register_fp( $wp_customize ) {
     $wp_customize->add_control(
     'madhat_fa2_title', array(
     'settings' => 'madhat_fa2_title',
-    'label'    => __( 'Title for the fa2','madhat' ),
+    'label'    => __( 'Title for the featured area 2','madhat' ),
     'section'  => 'madhat_fc_fa2',
     'type'     => 'text',
     )
@@ -115,7 +115,7 @@ function madhat_customize_register_fp( $wp_customize ) {
     $wp_customize,
     'madhat_fa2_cat',
     array(
-    'label'    => __('Category For Square.','madhat'),
+    'label'    => __('Category For featured area 2.','madhat'),
     'settings' => 'madhat_fa2_cat',
     'section'  => 'madhat_fc_fa2'
     )

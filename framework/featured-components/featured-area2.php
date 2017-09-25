@@ -2,9 +2,11 @@
 <div class="container">
 <?php if ( get_theme_mod('madhat_fa2_enable') && is_front_page() ) : ?>
 	<div class="col-md-12">
+        <?php if(get_theme_mod('madhat_fa2_title')):?>
 		<div class="section-title">
 			<span><?php echo get_theme_mod('madhat_fa2_title',__('Popular Articles','madhat')); ?></span>
-		</div>	
+		</div>
+        <?php endif;?>
 		
 		<?php /* Start the Loop */ $count=0; ?>
 				<?php
