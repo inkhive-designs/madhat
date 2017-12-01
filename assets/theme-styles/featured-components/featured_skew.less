@@ -28,19 +28,24 @@
     overflow: hidden;
     img {
       max-width: 100%;
+      @media screen  and (max-width: 767px) {
+        width: 100%;
+      }
       .transform(scale(1.1));
       .transition(2s all ease);
     }
-    &:hover {
-      .transform(perspective(1300px) rotateY(0deg) );
-      box-shadow: fade(#444,50%) 1px 1px 1px;
-      img {
-        filter: brightness(0.5);
-        -webkit-filter: brightness(0.5);
-        .transform(scale(1));
-      }
-      .titledesc {
-        opacity: 1;
+    @media screen  and (min-width: 767px) {
+      &:hover {
+        .transform(perspective(1300px) rotateY(0deg));
+        box-shadow: fade(#444, 50%) 1px 1px 1px;
+        img {
+          filter: brightness(0.5);
+          -webkit-filter: brightness(0.5);
+          .transform(scale(1));
+        }
+        .titledesc {
+          opacity: 1;
+        }
       }
     }
   }

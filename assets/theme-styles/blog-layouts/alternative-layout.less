@@ -6,16 +6,24 @@
   @media screen and (max-width: 768px) {
     border-bottom: none;
   }
-  &:nth-child(odd) {
-
-  }
   &:nth-child(even) {
     .featured-thumb{
-      float: right;
+      @media screen and (min-width: 991px) {
+        float: right;
+      }
     }
     .out-thumb{
+
       float: left;
       padding-left: 0px;
+
+    }
+  }
+  @media screen and (max-width: 991px) {
+    &:nth-child(even),&:nth-child(odd) {
+      .featured-thumb,.out-thumb {
+        padding: 0px 15px;
+      }
     }
   }
   &:nth-last-child(2) {

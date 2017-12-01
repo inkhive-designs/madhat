@@ -33,6 +33,16 @@ function madhat_custom_header_setup() {
 		'admin-head-callback'    => 'madhat_admin_header_style',
 		'admin-preview-callback' => 'madhat_admin_header_image',
 	) ) );
+	
+	//default header image
+    register_default_headers( array(
+            'default-image'    => array(
+                'url'            => '%s/assets/images/header.jpg',
+                'thumbnail_url'    => '%s/assets/images/header.jpg',
+                'description'    => __('Default Header Image', 'madhat')
+            )
+        )
+    );
 }
 add_action( 'after_setup_theme', 'madhat_custom_header_setup' );
 

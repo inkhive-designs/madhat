@@ -1,5 +1,11 @@
 ChangeLog
 =========
+Version 1.1.0
+
+    i) Header Image bug fixed.
+    ii) Grid Alternative blog layout bug fixed.
+    iii) Featured Areas bug fixed on mobile screen.
+
 Version 1.0.9
     i) featured areas bug fixed.
 
