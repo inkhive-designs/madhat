@@ -4,6 +4,7 @@ function madhat_customize_register_social( $wp_customize ) {
 $wp_customize->add_section('madhat_social_section', array(
     'title' => __('Social Icons','madhat'),
     'priority' => 44 ,
+    'panel' => 'madhat_header_panel'
 ));
 //social icons style
     $social_style = array(

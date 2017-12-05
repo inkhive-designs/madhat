@@ -1,6 +1,13 @@
 <?php
 //Settings for Header Image
 function madhat_customize_register_header( $wp_customize ) {
+    $wp_customize->get_section('header_image')->panel = 'madhat_header_panel';
+
+    $wp_customize->add_panel('madhat_header_panel', array(
+        'title' => __('Header Settings', 'madhat'),
+        'priority' => 20
+    ));
+
 $wp_customize->add_setting( 'madhat_himg_style' , array(
     'default'     => true,
     'sanitize_callback' => 'madhat_sanitize_himg_style'

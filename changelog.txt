@@ -1,5 +1,9 @@
 ChangeLog
 =========
+Version 1.1.1
+    i) Page/Post Large Font Size Issue Fixed
+    ii) Minor Bug Fixes
+
 Version 1.1.0
 
     i) Header Image bug fixed.

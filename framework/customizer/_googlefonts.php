@@ -7,6 +7,7 @@ $wp_customize->add_section(
         'title'     => __('Google Web Fonts','madhat'),
         'description' => __('Defaults: Playfair Display','madhat'),
         'priority'  => 41,
+        'panel' => 'madhat_design_panel'
     )
 );
 

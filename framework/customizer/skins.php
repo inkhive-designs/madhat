@@ -4,6 +4,7 @@ function madhat_customize_register_skins( $wp_customize ) {
 $wp_customize->add_section( 'title_tagline' , array(
     'title'      => __( 'Title, Tagline & Logo', 'madhat' ),
     'priority'   => 30,
+    'panel' => 'madhat_header_panel'
 ) );
 
 

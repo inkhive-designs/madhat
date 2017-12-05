@@ -86,7 +86,7 @@ function madhat_custom_css_mods() {
             echo "#primary-mono .entry-content{ font-size:20px;}";
         endif;
     else:
-        echo "#primary-mono .entry-content{ font-size:94px;}";
+        echo "#primary-mono .entry-content{ font-size:15px;}";
     endif;
 
     //site title font size

@@ -1,6 +1,10 @@
 <?php
 // Layout and Design
 function madhat_customize_register_layouts( $wp_customize ) {
+    $wp_customize->get_section('colors')->panel = 'madhat_design_panel';
+    $wp_customize->get_section('background_image')->panel = 'madhat_design_panel';
+    $wp_customize->get_section('custom_css')->panel = 'madhat_design_panel';
+
 $wp_customize->add_panel( 'madhat_design_panel', array(
     'priority'       => 40,
     'capability'     => 'edit_theme_options',
