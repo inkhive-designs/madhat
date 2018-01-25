@@ -72,5 +72,104 @@ $wp_customize->add_control(
     'settings' => 'madhat_himg_repeat',
     'type' => 'checkbox',
 ) );
+    $wp_customize->add_section( 'title_tagline' , array(
+        'title'      => __( 'Title, Tagline & Logo', 'madhat' ),
+        'priority'   => 30,
+        'panel' => 'madhat_header_panel'
+    ) );
+
+    function madhat_logo_enabled($control) {
+        $option = $control->manager->get_setting('custom_logo');
+        return $option->value() == true;
+        //return true;
+    }
+
+
+
+//Replace Header Text Color with, separate colors for Title and Description
+//Override madhat_site_titlecolor
+    $wp_customize->remove_control('display_header_text');
+    $wp_customize->remove_setting('header_textcolor');
+    $wp_customize->add_setting('madhat_site_titlecolor', array(
+        'default'     => '#FFF',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'madhat_site_titlecolor', array(
+            'label' => __('Site Title Color','madhat'),
+            'section' => 'colors',
+            'settings' => 'madhat_site_titlecolor',
+            'type' => 'color'
+        ) )
+    );
+
+    $wp_customize->add_setting('madhat_header_desccolor', array(
+        'default'     => '#FFF',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'madhat_header_desccolor', array(
+            'label' => __('Site Tagline Color','madhat'),
+            'section' => 'colors',
+            'settings' => 'madhat_header_desccolor',
+            'type' => 'color'
+        ) )
+    );
+
+//Settings For Logo Area
+
+    $wp_customize->add_setting(
+        'madhat_hide_title_tagline',
+        array( 'sanitize_callback' => 'madhat_sanitize_checkbox' )
+    );
+
+    $wp_customize->add_control(
+        'madhat_hide_title_tagline', array(
+            'settings' => 'madhat_hide_title_tagline',
+            'label'    => __( 'Hide Title and Tagline.', 'madhat' ),
+            'section'  => 'title_tagline',
+            'type'     => 'checkbox',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'madhat_branding_below_logo',
+        array( 'sanitize_callback' => 'madhat_sanitize_checkbox' )
+    );
+
+    $wp_customize->add_control(
+        'madhat_branding_below_logo', array(
+            'settings' => 'madhat_branding_below_logo',
+            'label'    => __( 'Display Site Title and Tagline Below the Logo.', 'madhat' ),
+            'section'  => 'title_tagline',
+            'type'     => 'checkbox',
+            'active_callback' => 'madhat_title_visible'
+        )
+    );
+
+    function madhat_title_visible( $control ) {
+        $option = $control->manager->get_setting('madhat_hide_title_tagline');
+        return $option->value() == false ;
+    }
+
+    $wp_customize->add_setting(
+        'madhat_center_logo',
+        array(
+            'sanitize_callback' => 'madhat_sanitize_checkbox',
+            'default' => true )
+    );
+
+    $wp_customize->add_control(
+        'madhat_center_logo', array(
+            'settings' => 'madhat_center_logo',
+            'label'    => __( 'Center Align.', 'madhat' ),
+            'section'  => 'title_tagline',
+            'type'     => 'checkbox',
+        )
+    );
 }
 add_action( 'customize_register', 'madhat_customize_register_header' );

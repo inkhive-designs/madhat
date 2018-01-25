@@ -1,9 +1,9 @@
 <header id="masthead" class="site-header" role="banner">
     <div class="container">
         <div class="site-branding">
-            <?php if ( madhat_logo() ) : ?>
+            <?php if ( function_exists( 'the_custom_logo' ) ) : ?>
                 <div id="site-logo">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo madhat_logo(); ?>"></a>
+                    <?php the_custom_logo();?>
                 </div>
             <?php endif; ?>
             <div id="text-title-desc">
@@ -13,12 +13,12 @@
         </div>
     </div>
 
-    <!--
+
 <div id="search-icon">
         <a id="searchicon">
             <span class="fa fa-search"></span>
         </a>
     </div>
--->
+
 
 </header><!-- #masthead -->

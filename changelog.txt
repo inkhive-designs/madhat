@@ -1,5 +1,13 @@
 ChangeLog
 =========
+Version: 1.1.2
+
+    i) Jumbo search added.
+    ii) Skins added.
+    iii) Custom Logo added.
+    iv) Social icons minor bug fixed.
+    v) Site title and description minor bug fixed on mobile screen.
+
 Version 1.1.1
     i) Page/Post Large Font Size Issue Fixed
     ii) Minor Bug Fixes
