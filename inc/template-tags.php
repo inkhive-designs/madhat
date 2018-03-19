@@ -18,7 +18,7 @@ function madhat_paging_nav() {
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'madhat' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'madhat' ); ?></h1>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
@@ -49,7 +49,7 @@ function madhat_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'madhat' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'madhat' ); ?></h1>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'madhat' ) );
@@ -287,7 +287,7 @@ function madhat_comment( $comment, $args, $depth ) {
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'madhat' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'madhat' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php esc_html_e( 'Pingback:', 'madhat' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'madhat' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -308,7 +308,7 @@ function madhat_comment( $comment, $args, $depth ) {
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'madhat' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'madhat' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 

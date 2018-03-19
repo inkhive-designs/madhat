@@ -1,5 +1,12 @@
 ChangeLog
 =========
+Version 1.1.3
+
+	i) Featured Area 1 bug fixed.
+	ii) Blog layout minor bug fixed.
+	iii) Footer menu minor bug fixed.
+	iv) Madhat widget minor bug fixed.
+
 Version: 1.1.2
 
     i) Jumbo search added.

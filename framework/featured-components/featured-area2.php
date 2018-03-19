@@ -4,7 +4,7 @@
 	<div class="col-md-12">
         <?php if(get_theme_mod('madhat_fa2_title')):?>
 		<div class="section-title">
-			<span><?php echo get_theme_mod('madhat_fa2_title',__('Popular Articles','madhat')); ?></span>
+			<span><?php echo esc_html(get_theme_mod('madhat_fa2_title',__('Popular Articles','madhat'))); ?></span>
 		</div>
         <?php endif;?>
 		
@@ -30,9 +30,9 @@
 				    
 				    	<div class="popimage">
 				        <?php if (has_post_thumbnail()) : ?>	
-								<a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><?php the_post_thumbnail( $thumb ); ?></a>
+								<a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><?php the_post_thumbnail( $thumb,array(  'alt' => trim(strip_tags( $post->post_title ))) ); ?></a>
 						<?php else : ?>
-								<a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
+								<a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><img alt="<?php the_title() ?>" src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
 						<?php endif; ?>
 							<div class="titledesc">
 					            <h2><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></h2>

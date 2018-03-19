@@ -16,7 +16,7 @@ get_header(); ?>
 	<div id="primary" class="content-areas <?php echo esc_attr( apply_filters( 'madhat_primary-width', '' ) ); ?>">
 		<main id="main" class="site-main" role="main">
 		<div class="section-title">
-			<span><?php _e('Recent Posts','madhat'); ?></span>
+			<span><?php esc_html_e('Recent Posts','madhat'); ?></span>
 		</div>	
 		<?php if ( have_posts() ) : ?>
 
