@@ -19,8 +19,9 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
 			<?php printf( __( 'Theme Designed by %1$s.', 'madhat' ), '<a target="blank" href="'.esc_url("http://inkhive.com/").'" rel="nofollow">InkHive.com</a>' ); ?>
-			<span class="sep"></span>
-			<?php echo ( esc_html(get_theme_mod('madhat_footer_text')) == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','madhat')) : get_theme_mod('madhat_footer_text'); ?>
+			<span class="sep">
+               <?php echo ( esc_html(get_theme_mod('madhat_footer_text')) == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','madhat')) : get_theme_mod('madhat_footer_text'); ?>
+            </span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	

@@ -89,42 +89,14 @@ $wp_customize->add_control(
 //Replace Header Text Color with, separate colors for Title and Description
 //Override madhat_site_titlecolor
     $wp_customize->remove_control('display_header_text');
-    $wp_customize->remove_setting('header_textcolor');
-    $wp_customize->add_setting('madhat_site_titlecolor', array(
-        'default'     => '#FFF',
-        'sanitize_callback' => 'sanitize_hex_color',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control(
-            $wp_customize,
-            'madhat_site_titlecolor', array(
-            'label' => __('Site Title Color','madhat'),
-            'section' => 'colors',
-            'settings' => 'madhat_site_titlecolor',
-            'type' => 'color'
-        ) )
-    );
-
-    $wp_customize->add_setting('madhat_header_desccolor', array(
-        'default'     => '#FFF',
-        'sanitize_callback' => 'sanitize_hex_color',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control(
-            $wp_customize,
-            'madhat_header_desccolor', array(
-            'label' => __('Site Tagline Color','madhat'),
-            'section' => 'colors',
-            'settings' => 'madhat_header_desccolor',
-            'type' => 'color'
-        ) )
-    );
-
 //Settings For Logo Area
 
     $wp_customize->add_setting(
         'madhat_hide_title_tagline',
-        array( 'sanitize_callback' => 'madhat_sanitize_checkbox' )
+        array(
+            'sanitize_callback' => 'madhat_sanitize_checkbox',
+            'transport'  => 'postMessage',
+        )
     );
 
     $wp_customize->add_control(
@@ -138,7 +110,10 @@ $wp_customize->add_control(
 
     $wp_customize->add_setting(
         'madhat_branding_below_logo',
-        array( 'sanitize_callback' => 'madhat_sanitize_checkbox' )
+        array(
+            'sanitize_callback' => 'madhat_sanitize_checkbox',
+            'transport'     => 'postMessage',
+        )
     );
 
     $wp_customize->add_control(
@@ -160,7 +135,9 @@ $wp_customize->add_control(
         'madhat_center_logo',
         array(
             'sanitize_callback' => 'madhat_sanitize_checkbox',
-            'default' => true )
+            'default' => true,
+            'transport'     => 'postMessage'
+        )
     );
 
     $wp_customize->add_control(

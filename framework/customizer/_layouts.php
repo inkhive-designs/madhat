@@ -1,7 +1,6 @@
 <?php
 // Layout and Design
 function madhat_customize_register_layouts( $wp_customize ) {
-    $wp_customize->get_section('colors')->panel = 'madhat_design_panel';
     $wp_customize->get_section('background_image')->panel = 'madhat_design_panel';
     $wp_customize->get_section('custom_css')->panel = 'madhat_design_panel';
 
@@ -61,7 +60,9 @@ $wp_customize->add_section(
 
 $wp_customize->add_setting(
     'madhat_disable_sidebar',
-    array( 'sanitize_callback' => 'madhat_sanitize_checkbox' )
+    array(
+        'sanitize_callback' => 'madhat_sanitize_checkbox',
+    )
 );
 
 $wp_customize->add_control(
@@ -76,7 +77,9 @@ $wp_customize->add_control(
 
 $wp_customize->add_setting(
     'madhat_disable_sidebar_home',
-    array( 'sanitize_callback' => 'madhat_sanitize_checkbox' )
+    array(
+        'sanitize_callback' => 'madhat_sanitize_checkbox',
+    )
 );
 
 $wp_customize->add_control(
@@ -92,7 +95,9 @@ $wp_customize->add_control(
 
 $wp_customize->add_setting(
     'madhat_disable_sidebar_front',
-    array( 'sanitize_callback' => 'madhat_sanitize_checkbox' )
+    array(
+        'sanitize_callback' => 'madhat_sanitize_checkbox',
+    )
 );
 
 $wp_customize->add_control(
@@ -131,99 +136,65 @@ $wp_customize->add_control(
         ),
     )
 );
-//    //content Font size
-//    $wp_customize->add_section(
-//        'madhat_content_fontsize_sec',
-//        array(
-//            'title'     => __('Content Font Size','madhat'),
-//            'priority'  => 0,
-//            'panel'     => 'madhat_design_panel'
-//        )
-//    );
-//    $wp_customize->add_setting(
-//        'madhat_content_fontsize_set',
-//        array(
-//            'default' => 'default',
-//            'sanitize_callback' => 'madhat_sanitize_content_size'
-//            )
-//    );
-////    function madhat_sanitize_content_size( $input ) {
-////        if ( in_array($input, array('default','small','medium','large','extra-large') ) )
-////            return $input;
-////        else
-////            return '';
-////    }
-//
-//    $wp_customize->add_control(
-//        'madhat_content_fontsize_set', array(
-//            'settings' => 'madhat_content_fontsize_set',
-//            'label'    => __( 'Font Size','madhat' ),
-//            'description' => __('Choose your font size. This is only for Posts and Pages. It wont affect your blog page.','madhat'),
-//            'section'  => 'madhat_content_fontsize_sec',
-//            'type'     => 'select',
-//            'choices' => array(
-//                'default'   => 'Default',
-//                'small' => 'Small',
-//                'medium'   => 'Medium',
-//                'large'  => 'Large',
-//                'extra-large' => 'Extra Large',
-//            ),
-//        )
-//    );
+    //content Font size
+    $wp_customize->add_section(
+        'madhat_content_fontsize_sec',
+        array(
+            'title'     => __('Content Font Size','madhat'),
+            'priority'  => 0,
+            'panel'     => 'madhat_design_panel'
+        )
+    );
+
+    $content_font_size = array(
+        '15px'   => __('Default', 'madhat'),
+        'small' => __('Small', 'madhat'),
+        'medium'   => __('Medium', 'madhat'),
+        'large'  => __('Large', 'madhat'),
+        'x-large' => __('Extra Large', 'madhat'),
+    );
+
+    function madhat_sanitize_content_size($nput) {
+        $content_font_size = array(
+            '15px',
+            'small',
+            'medium',
+            'large',
+            'x-large',
+        );
+        if ( in_array($input, $content_font_size) )
+            return $input;
+        else
+            return '';
+    }
+
+    $wp_customize->add_setting(
+        'madhat_content_fontsize_set',
+        array(
+            'default' => '15px',
+            'sanitize_callback' => 'madhat_sanitize_content_size',
+            'transport'     => 'postMessage',
+        )
+    );
+
+
+    $wp_customize->add_control(
+        'madhat_content_fontsize_set', array(
+            'settings' => 'madhat_content_fontsize_set',
+            'label'    => __( 'Font Size','madhat' ),
+            'description' => __('Choose your font size. This is only for Posts and Pages. It wont affect your blog page.','madhat'),
+            'section'  => 'madhat_content_fontsize_sec',
+            'type'     => 'select',
+            'choices' => $content_font_size,
+        )
+    );
+
 /* Active Callback Function */
 function madhat_show_sidebar_options($control) {
 
     $option = $control->manager->get_setting('madhat_disable_sidebar');
     return $option->value() == false ;
 
-}
-
-class MadHat_Custom_CSS_Control extends WP_Customize_Control {
-    public $type = 'textarea';
-
-    public function render_content() {
-        ?>
-        <label>
-            <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-            <textarea rows="8" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-        </label>
-        <?php
-    }
-}
-
-$wp_customize-> add_section(
-    'madhat_custom_codes',
-    array(
-        'title'			=> __('Custom CSS','madhat'),
-        'description'	=> __('Enter your Custom CSS to Modify design.','madhat'),
-        'priority'		=> 11,
-        'panel'			=> 'madhat_design_panel'
-    )
-);
-
-$wp_customize->add_setting(
-    'madhat_custom_css',
-    array(
-        'default'		=> '',
-        'sanitize_callback'    => 'wp_filter_nohtml_kses',
-        'sanitize_js_callback' => 'wp_filter_nohtml_kses'
-
-    )
-);
-
-$wp_customize->add_control(
-    new MadHat_Custom_CSS_Control(
-        $wp_customize,
-        'madhat_custom_css',
-        array(
-            'section' => 'madhat_custom_codes',
-            'settings' => 'madhat_custom_css'
-        )
-    )
-);
-
-function madhat_sanitize_text( $input ) {
-    return wp_kses_post( force_balance_tags( $input ) );
 }
 
 $wp_customize-> add_section(
@@ -240,7 +211,8 @@ $wp_customize->add_setting(
     'madhat_footer_text',
     array(
         'default'		=> '',
-        'sanitize_callback'	=> 'sanitize_text_field'
+        'sanitize_callback'	=> 'sanitize_text_field',
+        'transport' => 'postMessage',
     )
 );
 

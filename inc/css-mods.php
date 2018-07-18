@@ -74,15 +74,15 @@ function madhat_custom_css_mods() {
 		endif;
 
     // page & post fontsize
-    if(get_theme_mod('madhat_content_page_post_fontsize_set')):
-        $pp_size_val = get_theme_mod('madhat_content_page_post_fontsize_set');
+    if(get_theme_mod('madhat_content_fontsize_set')):
+        $pp_size_val = get_theme_mod('madhat_content_fontsize_set');
         if($pp_size_val=='small'):
             echo "#primary-mono .entry-content{ font-size:12px;}";
         elseif ($pp_size_val=='medium'):
             echo "#primary-mono .entry-content{ font-size:16px;}";
         elseif ($pp_size_val=='large'):
             echo "#primary-mono .entry-content{ font-size:18px;}";
-        elseif ($pp_size_val=='extra-large'):
+        elseif ($pp_size_val=='x-large'):
             echo "#primary-mono .entry-content{ font-size:20px;}";
         endif;
     else:
@@ -94,7 +94,7 @@ function madhat_custom_css_mods() {
     if(get_theme_mod('madhat_content_site_title_fontsize_set')):
         $site_title_size_val=get_theme_mod('madhat_content_site_title_fontsize_set');
         if($site_title_size_val != 'default'):
-            echo "#masthead h1.site-title {font-size:".$site_title_size_val."px !important;}";
+            echo "#masthead h1.site-title {font-size:".$site_title_size_val."px;}";
         else:
             echo "#masthead h1.site-title {font-size:42"."px;}";
         endif;
@@ -105,7 +105,7 @@ function madhat_custom_css_mods() {
     if(get_theme_mod('madhat_content_site_desc_fontsize_set')):
         $site_desc_size_val=get_theme_mod('madhat_content_site_desc_fontsize_set');
         if($site_desc_size_val != 'default'):
-            echo "#masthead h2.site-description {font-size:".$site_desc_size_val."px !important;}";
+            echo "#masthead h2.site-description {font-size:".$site_desc_size_val."px;}";
         else:
             echo "#masthead h2.site-description {font-size:15"."px;}";
         endif;

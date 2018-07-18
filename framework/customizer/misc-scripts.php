@@ -45,5 +45,33 @@ $wp_customize->add_control(
         )
     )
 );
+
+    $wp_customize->add_section(
+        'madhat_important_links_section',
+        array(
+            'title'     => __('Important Links','madhat'),
+            'priority'  => 11,
+        )
+    );
+
+    $wp_customize->add_setting(
+        'madhat_important_links',
+        array( 'sanitize_callback' => 'esc_textarea' )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Upgrade_Control(
+            $wp_customize,
+            'madhat_important_links',
+            array(
+                'settings'		=> 'madhat_important_links',
+                'section'		=> 'madhat_important_links_section',
+                'description'	=> '<a class="madhat-important-links" href="https://inkhive.com/contact-us/" target="_blank">'.__('InkHive Support Forum', 'madhat').'</a>
+                                    <a class="madhat-important-links" href="https://demo.inkhive.com/madhat-plus/" target="_blank">'.__('Madhat Live Demo', 'madhat').'</a>
+                                    <a class="madhat-important-links" href="https://www.facebook.com/inkhivethemes/" target="_blank">'.__('We Love Our Facebook Fans', 'madhat').'</a>
+                                    <a class="madhat-important-links" href="https://wordpress.org/support/theme/madhat/reviews" target="_blank">'.__('Review Us', 'madhat').'</a>'
+            )
+        )
+    );
 }
 add_action( 'customize_register', 'madhat_customize_register_misc' );

@@ -18,7 +18,8 @@ $wp_customize->add_section('madhat_social_section', array(
     $wp_customize->add_setting(
         'madhat_social_icon_style_set', array(
         'sanitize_callback' => 'madhat_sanitize_social_style',
-        'default' => 'hvr-bounce-to-bottom'
+        'default' => 'hvr-bounce-to-bottom',
+        'transport'     => 'postMessage',
     ));
     
     function madhat_sanitize_social_style( $input ) {
@@ -57,7 +58,8 @@ for ($x = 1 ; $x <= ($social_count - 3) ; $x++) :
     $wp_customize->add_setting(
         'madhat_social_'.$x, array(
         'sanitize_callback' => 'madhat_sanitize_social',
-        'default' => 'none'
+        'default' => 'none',
+        'transport' => 'postMessage',
     ));
 
     $wp_customize->add_control( 'madhat_social_'.$x, array(

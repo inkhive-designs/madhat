@@ -18,7 +18,8 @@ $wp_customize->add_setting(
     'madhat_title_font',
     array(
         'default'=> 'Playfair Display',
-        'sanitize_callback' => 'madhat_sanitize_gfont'
+        'sanitize_callback' => 'madhat_sanitize_gfont',
+        'transport' => 'postMessage',
     )
 );
 
@@ -42,7 +43,9 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
     'madhat_body_font',
     array(	'default'=> 'Playfair Display',
-        'sanitize_callback' => 'madhat_sanitize_gfont' )
+        'sanitize_callback' => 'madhat_sanitize_gfont',
+        'transport'     => 'postMessage',
+    )
 );
 
 $wp_customize->add_control(
@@ -55,47 +58,13 @@ $wp_customize->add_control(
     )
 );
 
-    //Page and Post content Font size start
-    $wp_customize->add_setting(
-        'madhat_content_page_post_fontsize_set',
-        array(
-            'default' => 'default',
-            'sanitize_callback' => 'madhat_sanitize_content_size'
-        )
-    );
-    function madhat_sanitize_content_size( $input ) {
-        if ( in_array($input, array('default','small','medium','large','extra-large') ) )
-            return $input;
-        else
-            return '';
-    }
-
-    $wp_customize->add_control(
-        'madhat_content_page_post_fontsize_set', array(
-            'settings' => 'madhat_content_page_post_fontsize_set',
-            'label'    => __( 'Page/Post Font Size','madhat' ),
-            'description' => __('Choose your font size. This is only for Posts and Pages. It wont affect your blog page.','madhat'),
-            'section'  => 'madhat_typo_options',
-            'type'     => 'select',
-            'choices' => array(
-                'default'   => 'Default',
-                'small' => 'Small',
-                'medium'   => 'Medium',
-                'large'  => 'Large',
-                'extra-large' => 'Extra Large',
-            ),
-        )
-    );
-
-    //Page and Post content Font size end
-
-
     //site title Font size start
     $wp_customize->add_setting(
         'madhat_content_site_title_fontsize_set',
         array(
             'default' => '42',
             'sanitize_callback' => 'absint',
+            'transport'     => 'postMessage'
         )
     );
 
@@ -116,6 +85,7 @@ $wp_customize->add_control(
         array(
             'default' => '15',
             'sanitize_callback' => 'absint',
+            'transport'     => 'postMessage'
         )
     );
 
